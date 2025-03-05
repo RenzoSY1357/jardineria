@@ -1,0 +1,32 @@
+
+<header th:fragment="headerbase">
+  <nav>
+      <div class="nav-wrapper blue">
+          <a href="#" class="brand-logo">Mi Empresa</a>
+          <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#quienes-somos">
+                 <!-- <i class="material-icons">add_circle</i>  -->
+                  <span>Quiénes Somos</span>
+                </a>
+              </li>
+              <li><a href="/servicios">Servicios</a></li>
+              <li><a href="/productos">Productos</a></li>
+              <li><a href="#gamas">Gamas</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Menú lateral en móvil -->
+  <ul class="sidenav" id="mobile-menu">
+      <li><a href="#quienes-somos">Quiénes Somos</a></li>
+      <li><a href="/servicios">Servicios</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#gamas">Gamas</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+  </ul>
+</header>

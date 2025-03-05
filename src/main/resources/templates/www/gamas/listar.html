@@ -1,0 +1,35 @@
+<!-- index es DECORADA por la plantilla base.html-->
+
+<html xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{/www/layout/base}"
+>
+
+<div layout:fragment="MainBase">
+    <!-- Contenido principal -->
+    <div class="container">
+         
+        <section id="servicios">
+            <h2>Listado de Gamas</h2>
+            <table class="striped">
+                <thead>
+                    <tr >
+                        <th>Gama</th>
+                        <th>Descripcion</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr th:each="gama : ${Lgamas}">
+                        <td th:text="${gama.gamaid}"></td>
+                        <td th:text="${gama.descripcionTexto}"></td>
+                        <td th:text="${gama.imagen}"></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+ </div>
+
+ 
+</div>

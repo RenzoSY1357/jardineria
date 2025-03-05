@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- xmlns:layout: que la plantilla puede ser heredada -->
+<html 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://wwww.ultraq.net.nz/thymeleaf/layout" 
+    lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardineria Garden</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link th:href="@{/webjars/materializecss/css/materialize.min.css}" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="menu.png">
+    <!-- Estilos personalizados -->
+    <style>
+        .brand-logo {
+            font-size: 1.8rem;
+            color:red;
+        }
+  
+    </style>
+</head>
+<body>
+    <header th:replace="~{/www/layout/components/header :: headerbase}">
+        <h1>header base</h1>
+    </header>
+    <main>
+        <!-- index, contacto, servicios, productos ... 
+            va a redefinir fragment mainBase -->
+        <div layout:fragment="MainBase">
+            <h1>Main baseee</h1>
+        </div>
+
+    </main>
+    <footer 
+        th:replace="~{www/layout/components/footer :: footerbase}">
+        <h1>Footer Base</h1>
+    </footer>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/materializecss/js/materialize.min.js}"></script>
+<!-- Inicialización del menú lateral en móvil -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+</script>
+
+
+</body>
+</html>

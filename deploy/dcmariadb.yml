@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: bdjardineria
+    image: mariadb
+    environment:
+      MARIADB_USER: jardineria
+      MARIADB_PASSWORD: pswjardineria
+      MARIADB_DATABASE: jardineriagarden
+      MARIADB_ROOT_PASSWORD: renzo1357
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3307:3306"

@@ -1,0 +1,36 @@
+package com.morgado.jardineria.model.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.morgado.jardineria.model.Entity.Gamas;
+import com.morgado.jardineria.model.Services.Implementations;
+import com.morgado.jardineria.model.Repository.GamasRepository;
+
+@Service
+public class GamasService implements Implementations<Gamas> {
+    @Autowired
+    GamasRepository gamasRep;
+
+    @Override
+    public void create(Gamas gama){
+        this.gamasRep.save(gama);
+    }
+
+    @Override
+    public void delete (String id){
+        this.gamasRep.deleteById(id);
+    }
+
+    @Override
+    public Gamas getId(String id){
+        return this.gamasRep.findById(id).get();
+    }
+
+    @Override
+    public List<Gamas> getAll() {
+        return this.gamasRep.findAll();
+    }
+}
