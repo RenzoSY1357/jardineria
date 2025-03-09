@@ -1,4 +1,4 @@
-package com.morgado.jardineria;
+package com.renzo.jardineria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class JardineriaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JardineriaApplication.class, args);
 	}
-
 }
