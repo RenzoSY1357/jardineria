@@ -1,4 +1,4 @@
-package com.morgado.jardineria.model.Entity;
+package com.renzo.jardineria.model.Entity;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;

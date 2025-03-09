@@ -1,11 +1,11 @@
-package com.morgado.jardineria.model.Services;
+package com.renzo.jardineria.model.Services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.morgado.jardineria.model.Entity.Gamas;
-import com.morgado.jardineria.model.Repository.GamasRepository;
+import com.renzo.jardineria.model.Entity.Gamas;
+import com.renzo.jardineria.model.Repository.GamasRepository;
 
 @Service
 public class GamasService {
